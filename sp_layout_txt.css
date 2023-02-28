@@ -16,11 +16,15 @@
 
 */
 
-/* Window and Body Styles */
+/* Window and Body Styles
+This first section sets the height of the HTML element to be 100% of the viewport height, 
+which means that it will take up the entire height of the visible area of the browser window.*/
 html {
 	height: 100%;
 }
-
+/*This section sets the width of the body element to be 95% of the viewport width, and centers it horizontally on the page using the 
+"margin: 0 auto;" property. It also sets the minimum height of the body element to be 100% of the viewport height, so that it always
+fills the entire vertical space of the page. Finally, it sets the background color of the body element to be a light gray (#f3f3f3).*/
 body {
 	width: 95%;
 	margin: 0 auto;
@@ -28,38 +32,51 @@ body {
 	background-color: #f3f3f3;
 }
 
-/* Display all inline images as blocks */
+/* Display all inline images as blocks 
+This section sets the display property of all image elements to "block",
+which means that they will take up the entire width of their parent container and be on their own line.*/
 img {
 	display: block;
 }
 
-/* CSS Grid Styles */
+/* CSS Grid Styles 
+This section sets the display property of the body element to "grid", which means that it will use CSS grid layout to arrange its child elements
+in a grid pattern.
+It also sets the grid-template-columns property to create a 4-column grid with equal widths using the "1fr" unit.*/
 body {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+/*This section sets the display property of an element with the ID of "logo" to "grid", and sets its grid-column property
+ to span across 3 columns
+ using the "span 3" value. It also sets the width of the element to be 100% of its parent container.*/
 
 #logo {
    display:grid;
 	grid-column: span 3;
 	width: 100%;
 }
-
+/*This section sets the display property of the footer element to "grid",
+and sets its grid-column property to span across all 4 columns using the "span 4" value.*/
 footer {
    display: grid;
 	grid-column: span 4;
 }
 
+/*This section sets the grid-column property of all elements with the <aside> tag to span across 2 columns using the "span 2" value.*/
 aside {
 	grid-column: span 2;
 }
 
 /* Horizontal Navigation List Styles */
-
+/*This section sets the grid-column property of an element with the class of "horizontal"
+ to span across all 4 columns using the "span 4" value.*/
 .horizontal {
    grid-column: span 4;
 }
-
+/*This section sets the display property of all list item elements inside an element with the class of "horizontal" to "block",
+ and sets their float property to "left" so that they appear side-by-side horizontally.
+ It also sets their width to be 12.5% of their parent container, so that there are 8 list items in each row.*/
 .horizontal li {
 	display: block;
 	float: left;
@@ -68,31 +85,40 @@ aside {
 
 
 /* Section Styles */
+/*This section sets the width of all image elements inside a <section> tag to be 50% of their parent container,
+ and centers them horizontally on the page using the "margin: 0 auto;" property.*/
 section img {
 	width: 50%;
 	margin: 0 auto;
 }
-
+/*This section sets the width of all <p> elements inside a <section> tag to be 70%
+of their parent container, and centers them horizontally on the page using*/
 section p {
 	width: 70%;
 	margin: 0 auto;
 }
 
 /* Customer Comment Styles */
+/*This section sets the width of all elements with the <aside> tag to be 75% of their parent container,
+ and adds some padding to the bottom of these elements using the "padding-bottom" property.*/
 aside {
 	width: 75%;
 	padding-bottom: 30px;
 }
-
+/*This section selects every other element with the <aside> tag (using the "nth-of-type" pseudo-class), and sets its horizontal alignment to "end"
+ using the "justify-self" property. This will cause these elements to be aligned to the right side of their grid cells.*/
 aside:nth-of-type(odd) {
 	justify-self: end;
 }
-
+/*This section sets the float property of all <img> elements inside an element with the <aside> tag to "left",
+ so that they will appear to the left of any adjacent text. It also sets their width to be 20% of their parent container.*/
 aside img {
 	float: left;
 	width: 20%;
 }
-
+/*This section sets the float property of all <p> elements inside an element with the <aside> tag to "left",
+ and sets their width to be 75% of their parent container. It also adds a margin to the left side of the element using the "margin-left"
+ property, to create some space between the text and the image.*/
 aside p {
 	float: left;
 	width: 75%;
